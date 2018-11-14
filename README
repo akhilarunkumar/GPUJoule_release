@@ -2,6 +2,7 @@ This is the release of GPUJoule energy estimation framework
 If you have any questions regarding GPUJoule please email aarunkum@asu.edu.
 
 If you find this work useful, please consider citing the following papers
+
     * A. Arunkumar, E. Bolotin, D. Nellans, and C.-J. Wu, "Understanding the
     Future of Energy Efficiency in Multi-Module GPUs", in proceedings of the
     IEEE International Symposium of High Performance Computer Architecture,
@@ -43,6 +44,7 @@ Release Directory Structure
 **************************************
 
 This release follows the below directory structure:
+
 |-> energy_model_ubench // Directory containing microbenchmarks that are used 
     //to construct the GPU energy model
     |-> compute_epi // Compute instruction microbenchmarks
@@ -65,9 +67,10 @@ This release follows the below directory structure:
 **************************************
 Please update
 **************************************
-Please update the GPUJOULE_DIR macro in the microbenchmark files and scripts
-Please update the GPU_NAME macro in the power_monitor.c file
-Please update the NumCTA macro in the run scripts. We suggest (2 x SMs) on GPU
+
+Please update the GPUJOULE_DIR macro in the microbenchmark files and scripts.
+Please update the GPU_NAME macro in the power_monitor.c file.
+Please update the NumCTA macro in the run scripts. We suggest (2 x SMs) on GPU.
 
 **************************************
 Compiling Microbenchmarks
@@ -77,7 +80,9 @@ The microbenchmarks can be compiled using nvcc. To ensure the compiler does not
 optimize away the intended functionality of the microbenchmarks, disable 
 nvcc frontend and backend compiler optimizations. This can be done by using a
 command similar to the one below:
-    if the microbenchmark that's being compiled is available at "$bench"
+
+if the microbenchmark that's being compiled is available at "$bench"
+
     nvcc -O0 -Xcompiler -O0 -Xptxas -O0 $bench -o "$bench".out
     
 **************************************
