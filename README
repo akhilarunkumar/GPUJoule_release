@@ -57,7 +57,7 @@ This release follows the below directory structure:
     |-> run_stall_ubench.sh // script to execute stall energy microbenchmarks
 |-> validation_ubench // directory containing microbenchmarks that can be used
     // for energy model validation
-|-> nvml/example // Directory containing a sample program that uses nvml to 
+|-> nvml_power_monitor/example // Directory containing a sample program that uses nvml to 
     // periodically measure the frequency, power consumption, and temperature
     // of the GPU card.
 |-> README // this readme file.
